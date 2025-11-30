@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Admin Dashboard - Manage Blog Posts, Portfolio, and Background Info" />
+  <title>Admin Dashboard | Songeam Kanha</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Admin Dashboard</h1>
+      <p class="subtitle">Manage Your Website Content</p>
+      <nav>
+        <a href="../index.html">View Site</a>
+        <a href="index.html" class="active">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="admin-container">
+      <!-- Backup/Restore Bar -->
+      <div class="backup-bar">
+        <h3>
+          <i class="fas fa-cloud"></i> Backup & Restore Your Data
+        </h3>
+        <div class="backup-actions">
+          <button class="btn secondary" onclick="downloadBackup()" title="Download backup file to your computer">
+            <i class="fas fa-download"></i> Download Backup (JSON)
+          </button>
+          <button class="btn secondary" onclick="uploadBackup()" title="Upload a backup file to restore">
+            <i class="fas fa-upload"></i> Upload & Restore
+          </button>
+          <button class="btn secondary" onclick="showBackupInfo()" title="Learn about backups">
+            <i class="fas fa-info-circle"></i> Backup Info
+          </button>
+        </div>
+        <input type="file" id="backup-file-input" accept=".json" style="display: none;" />
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="admin-tabs">
+        <button class="tab-btn active" data-tab="blog">
+          <i class="fas fa-blog"></i> Blog Posts
+        </button>
+        <button class="tab-btn" data-tab="portfolio">
+          <i class="fas fa-briefcase"></i> Portfolio
+        </button>
+        <button class="tab-btn" data-tab="background">
+          <i class="fas fa-user"></i> Background Info
+        </button>
+      </div>
+
+      <!-- Blog Posts Tab -->
+      <div class="tab-content active" id="blog-tab">
+        <div class="admin-section">
+          <h2>Blog Posts Management</h2>
+          <button class="btn primary" onclick="openBlogEditor()">
+            <i class="fas fa-plus"></i> New Blog Post
+          </button>
+          
+          <div class="items-list" id="blog-posts-list">
+            <!-- Blog posts will be loaded here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Tab -->
+      <div class="tab-content" id="portfolio-tab">
+        <div class="admin-section">
+          <h2>Portfolio Management</h2>
+          <button class="btn primary" onclick="openPortfolioEditor()">
+            <i class="fas fa-plus"></i> New Portfolio Item
+          </button>
+          
+          <div class="items-list" id="portfolio-items-list">
+            <!-- Portfolio items will be loaded here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Background Info Tab -->
+      <div class="tab-content" id="background-tab">
+        <div class="admin-section">
+          <h2>Background Information</h2>
+          <form id="background-form" class="admin-form">
+            <div class="form-group">
+              <label for="background-name">Name</label>
+              <input type="text" id="background-name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="background-subtitle">Subtitle</label>
+              <input type="text" id="background-subtitle" name="subtitle" required />
+            </div>
+            <div class="form-group">
+              <label for="background-hero-title">Hero Title</label>
+              <input type="text" id="background-hero-title" name="heroTitle" required />
+            </div>
+            <div class="form-group">
+              <label for="background-hero-text">Hero Description</label>
+              <textarea id="background-hero-text" name="heroText" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="background-about">About Me</label>
+              <textarea id="background-about" name="about" rows="10" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="background-github">GitHub URL</label>
+              <input type="url" id="background-github" name="github" />
+            </div>
+            <div class="form-group">
+              <label for="background-linkedin">LinkedIn URL</label>
+              <input type="url" id="background-linkedin" name="linkedin" />
+            </div>
+            <div class="form-group">
+              <label for="background-email">Email</label>
+              <input type="email" id="background-email" name="email" />
+            </div>
+            <button type="submit" class="btn primary">
+              <i class="fas fa-save"></i> Save Background Info
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Blog Post Editor Modal -->
+  <div id="blog-editor-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="blog-editor-title">New Blog Post</h2>
+        <button class="modal-close" onclick="closeBlogEditor()">&times;</button>
+      </div>
+      <form id="blog-editor-form" class="admin-form">
+        <input type="hidden" id="blog-post-id" name="id" />
+        <div class="form-group">
+          <label for="blog-title">Title</label>
+          <input type="text" id="blog-title" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="blog-date">Date</label>
+          <input type="date" id="blog-date" name="date" required />
+        </div>
+        <div class="form-group">
+          <label for="blog-author">Author</label>
+          <input type="text" id="blog-author" name="author" required />
+        </div>
+        <div class="form-group">
+          <label for="blog-description">Short Description</label>
+          <textarea id="blog-description" name="description" rows="2" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="blog-content">Content (Markdown supported)</label>
+          <textarea id="blog-content" name="content" rows="15" required></textarea>
+          <small>You can use Markdown syntax for formatting</small>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn secondary" onclick="closeBlogEditor()">Cancel</button>
+          <button type="submit" class="btn primary">
+            <i class="fas fa-save"></i> Save Post
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Portfolio Editor Modal -->
+  <div id="portfolio-editor-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="portfolio-editor-title">New Portfolio Item</h2>
+        <button class="modal-close" onclick="closePortfolioEditor()">&times;</button>
+      </div>
+      <form id="portfolio-editor-form" class="admin-form">
+        <input type="hidden" id="portfolio-item-id" name="id" />
+        <div class="form-group">
+          <label for="portfolio-title">Title</label>
+          <input type="text" id="portfolio-title" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="portfolio-description">Description</label>
+          <textarea id="portfolio-description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="portfolio-icon">Icon Class (Font Awesome)</label>
+          <input type="text" id="portfolio-icon" name="icon" placeholder="e.g., fas fa-brain" required />
+          <small>Use Font Awesome icon classes (e.g., fas fa-brain, fas fa-code)</small>
+        </div>
+        <div class="form-group">
+          <label for="portfolio-link">Link URL</label>
+          <input type="url" id="portfolio-link" name="link" placeholder="https://..." />
+          <small>Optional: Leave empty for no link</small>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn secondary" onclick="closePortfolioEditor()">Cancel</button>
+          <button type="submit" class="btn primary">
+            <i class="fas fa-save"></i> Save Item
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/admin-config.js"></script>
+  <script>
+    // Protect admin page - check authentication before loading
+    if (typeof AdminConfig !== 'undefined') {
+      if (!AdminConfig.protectAdminPage()) {
+        // Admin access denied or login required - stop loading
+        // protectAdminPage() will show appropriate UI
+      }
+    }
+  </script>
+  <script src="../assets/js/data-manager.js"></script>
+  <script src="../assets/js/google-drive-backup.js"></script>
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+# Website Backup Files
+# Exclude JSON backup files created by the admin panel
+website-backup-*.json
+*-backup-*.json
+*.backup.json
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.old
+*~
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Local Config Overrides (if you create a local version)
+admin-config.local.js
+
+# Jekyll (GitHub Pages)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+

@@ -1,0 +1,115 @@
+<!--
+  Homepage for your personal website
+  ✏️ Customize your name, intro message, and project/blog previews.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Songeam Kanha's Portfolio - AI/ML Engineer and Developer showcasing projects and technical blog posts" />
+  <title>Songeam Kanha | AI/ML Engineer & Developer</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Songeam Kanha</h1>
+      <p class="subtitle">AI/ML Engineer & Developer</p>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="portfolio/index.html">Portfolio</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="admin/index.html" style="color: var(--primary-color);">
+          <i class="fas fa-cog"></i> Admin
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Hello, I'm Kanha</h2>
+        <p class="lead">Passionate about AI, Machine Learning, and Software Development</p>
+        <div class="cta-buttons">
+          <a href="portfolio/index.html" class="btn primary">View My Work</a>
+          <a href="blog/index.html" class="btn secondary">Read My Blog</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-projects">
+      <h2>Featured Projects</h2>
+      <div class="card-list">
+        <a class="card" href="portfolio/index.html">
+          <div class="card-content">
+            <i class="fas fa-project-diagram"></i>
+            <h3>AI/ML Projects</h3>
+            <p>Explore my latest machine learning and artificial intelligence projects</p>
+          </div>
+        </a>
+        <a class="card" href="portfolio/index.html">
+          <div class="card-content">
+            <i class="fas fa-code"></i>
+            <h3>Software Development</h3>
+            <p>Check out my software development and web application projects</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="latest-blog">
+      <h2>Latest Articles</h2>
+      <div class="card-list" id="homepage-blog-list">
+        <!-- Blog posts will be loaded dynamically -->
+        <div style="text-align: center; padding: 2rem; color: var(--light-text);">
+          Loading articles...
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get in Touch</h2>
+      <div class="social-links">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:your.email@example.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2024 Songeam Kanha. All rights reserved.</p>
+      <p>Built with ❤️ and shared on GitHub</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/admin-config.js"></script>
+  <script src="assets/js/admin-link-handler.js"></script>
+  <script src="assets/js/data-manager.js"></script>
+  <script src="assets/js/content-loader.js"></script>
+  <script>
+    // Load homepage content
+    document.addEventListener('DOMContentLoaded', () => {
+      // Ensure DataManager is initialized
+      if (typeof DataManager !== 'undefined') {
+        DataManager.init();
+      }
+      
+      ContentLoader.loadBackgroundInfo();
+      ContentLoader.loadHomepagePortfolio();
+      ContentLoader.loadHomepageBlogPosts();
+    });
+  </script>
+</body>
+</html>

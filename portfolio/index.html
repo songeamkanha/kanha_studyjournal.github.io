@@ -1,0 +1,65 @@
+<!--
+  Portfolio page to list all your projects
+  🧰 Add project cards or sections as needed.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Songeam Kanha's Portfolio - AI/ML Engineer and Developer showcasing projects and technical blog posts" />
+  <title>Portfolio | Songeam Kanha</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Songeam Kanha</h1>
+      <p class="subtitle">AI/ML Engineer & Developer</p>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html" class="active">Portfolio</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../admin/index.html" style="color: var(--primary-color);">
+          <i class="fas fa-cog"></i> Admin
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="featured-projects">
+      <h2>My Projects</h2>
+      <div class="card-list" id="portfolio-list">
+        <!-- Portfolio items will be loaded dynamically -->
+        <div style="text-align: center; padding: 2rem; color: var(--light-text);">
+          Loading portfolio...
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2024 Songeam Kanha. All rights reserved.</p>
+      <p>Built with ❤️ and shared on GitHub</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/admin-config.js"></script>
+  <script src="../assets/js/admin-link-handler.js"></script>
+  <script src="../assets/js/data-manager.js"></script>
+  <script src="../assets/js/content-loader.js"></script>
+  <script>
+    // Load portfolio items
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof DataManager !== 'undefined') {
+        DataManager.init();
+      }
+      ContentLoader.loadPortfolio();
+    });
+  </script>
+</body>
+</html>
