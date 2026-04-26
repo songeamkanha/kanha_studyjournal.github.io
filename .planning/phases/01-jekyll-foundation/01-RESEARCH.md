@@ -404,16 +404,16 @@ init() {
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Local development vs. live-only workflow**
    - What we know: System Ruby is 2.6.10; `bundle install` may work (>= 2.3.0 satisfied) but Ruby 2.6 EOL'd in 2022 and some gems may require newer versions.
    - What's unclear: Whether `bundle install` will complete without errors on Ruby 2.6 for github-pages 232 (some transitive deps may require Ruby >= 2.7).
-   - Recommendation: Plan Gemfile creation as a deliverable; note in the task that `bundle install` should be attempted but a live-only deploy to GitHub Pages is an acceptable fallback if it fails. The planner should flag this as a "verify locally" step, not a "blocker."
+   - RESOLVED: Live GitHub Pages build is the primary path. `bundle install` is optional — the executor should attempt it but proceed without it if it fails. 01-01 Task 1 flags this as a "verify locally" step, not a blocker.
 
 2. **Whether `.gitignore` needs `Gemfile.lock` added**
    - What we know: Current `.gitignore` does not include `Gemfile.lock`.
-   - Recommendation: Add `Gemfile.lock` to `.gitignore` as part of the Gemfile creation task.
+   - RESOLVED: Yes — 01-01 Task 2 adds `Gemfile.lock` to `.gitignore` after `.jekyll-metadata`.
 
 ---
 
