@@ -92,36 +92,36 @@ Which phases cover which requirements. Populated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | — | Pending |
-| INFRA-02 | — | Pending |
-| INFRA-03 | — | Pending |
-| INFRA-04 | — | Pending |
-| CONT-01 | — | Pending |
-| CONT-02 | — | Pending |
-| CONT-03 | — | Pending |
-| CONT-04 | — | Pending |
-| UX-01 | — | Pending |
-| UX-02 | — | Pending |
-| UX-03 | — | Pending |
-| UX-04 | — | Pending |
-| HOME-01 | — | Pending |
-| HOME-02 | — | Pending |
-| HOME-03 | — | Pending |
-| HOME-04 | — | Pending |
-| HOME-05 | — | Pending |
-| POST-01 | — | Pending |
-| POST-02 | — | Pending |
-| POST-03 | — | Pending |
-| AI-01 | — | Pending |
-| AI-02 | — | Pending |
-| AI-03 | — | Pending |
-| AI-04 | — | Pending |
+| INFRA-01 | Phase 1 — Jekyll Foundation | Pending |
+| INFRA-02 | Phase 1 — Jekyll Foundation | Pending |
+| INFRA-03 | Phase 1 — Jekyll Foundation | Pending |
+| INFRA-04 | Phase 1 — Jekyll Foundation | Pending |
+| CONT-01 | Phase 2 — Content Migration | Pending |
+| CONT-02 | Phase 2 — Content Migration | Pending |
+| CONT-03 | Phase 2 — Content Migration | Pending |
+| CONT-04 | Phase 2 — Content Migration | Pending |
+| UX-01 | Phase 3 — UX Polish | Pending |
+| UX-02 | Phase 3 — UX Polish | Pending |
+| UX-03 | Phase 3 — UX Polish | Pending |
+| UX-04 | Phase 3 — UX Polish | Pending |
+| HOME-01 | Phase 3 — UX Polish | Pending |
+| HOME-02 | Phase 3 — UX Polish | Pending |
+| HOME-03 | Phase 3 — UX Polish | Pending |
+| HOME-04 | Phase 3 — UX Polish | Pending |
+| HOME-05 | Phase 3 — UX Polish | Pending |
+| POST-01 | Phase 3 — UX Polish | Pending |
+| POST-02 | Phase 3 — UX Polish | Pending |
+| POST-03 | Phase 3 — UX Polish | Pending |
+| AI-01 | Phase 4 — AI Drafting Pipeline | Pending |
+| AI-02 | Phase 4 — AI Drafting Pipeline | Pending |
+| AI-03 | Phase 4 — AI Drafting Pipeline | Pending |
+| AI-04 | Phase 4 — AI Drafting Pipeline | Pending |
 
 **Coverage:**
 - v1 requirements: 24 total
-- Mapped to phases: 0 (roadmap pending)
-- Unmapped: 24 ⚠️
+- Mapped to phases: 24 (roadmap complete)
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-26*
-*Last updated: 2026-04-26 after initial definition*
+*Last updated: 2026-04-26 after roadmap creation — all 24 requirements mapped*
