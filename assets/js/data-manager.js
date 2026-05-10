@@ -10,6 +10,8 @@ const DataManager = {
 
   // Initialize default data if not exists
   init() {
+    if (this._initialized) return;   // guard: prevent double-init
+    this._initialized = true;        // mark as initialized
     // Initialize blog posts
     if (!this.getBlogPosts().length) {
       // Load from existing sample post if available
