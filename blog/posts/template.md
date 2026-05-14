@@ -1,8 +1,9 @@
 ---
 title: Your Post Title
-date: YYYY-MM-DD
+date: 2026-01-01
 author: Songeam Kanha
 description: A brief description of your post
+published: false
 ---
 
 # Your Post Title
