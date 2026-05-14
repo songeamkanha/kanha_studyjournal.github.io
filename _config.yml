@@ -1,7 +1,7 @@
 # Site settings
-title: My GitHub Pages Site
-description: A personal website to showcase my projects and portfolio.
-url: "https://kanha_studyjournal.github.io"  # Replace with your GitHub Pages URL
+title: "Kanha's Study Journal"
+description: "Notes on what I'm learning — algorithms, systems, ML, and building things."
+url: "https://songeamkanha.github.io"
 baseurl: "" # Leave this empty unless your site is in a subdirectory
 
 # Build settings
@@ -25,23 +25,13 @@ exclude:
 plugins:
   - jekyll-feed # Automatically generates an Atom feed for your site
   - jekyll-seo-tag # Adds SEO tags for better search engine optimization
+  - jekyll-sitemap
 
-# Social media links (optional)
-social_links:
-  twitter: your_twitter_handle
-  github: your_github_username
-  linkedin: your_linkedin_username
-
-# Author details (optional)
+# Author details
 author:
-  name: Your Name
-  email: your.email@example.com
+  name: Kanha Songeam
 
-# Other settings (optional)
-paginate: 5 # Number of posts per page for blog pagination
-paginate_path: "/page:num/" # URL path for paginated pages
-
-#navigation to each main page 
+#navigation to each main page
 navigation:
   - title: "Home"
     url: "/"
@@ -51,4 +41,3 @@ navigation:
     url: "/projects/"
   - title: "Contact"
     url: "/contact/"
-
