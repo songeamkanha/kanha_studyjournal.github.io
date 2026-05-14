@@ -13,7 +13,7 @@ Four phases close the single critical defect (localStorage-only content) and lay
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Jekyll Foundation** - Fix the Jekyll build pipeline so post commits can be deployed
-- [ ] **Phase 2: Content Migration** - Move all content from localStorage into committed files visible to every visitor
+- [x] **Phase 2: Content Migration** - Move all content from localStorage into committed files visible to every visitor
 - [ ] **Phase 3: UX Polish** - Make the site warm, personal, and readable with proper typography, tags, and homepage content
 - [ ] **Phase 4: AI Drafting Pipeline** - Add a local CLI so rough notes become reviewable markdown posts without touching site code
 
@@ -88,6 +88,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Jekyll Foundation | 3/3 | Complete ✓ | 2026-05-09 |
-| 2. Content Migration | 0/4 | Not started | - |
+| 2. Content Migration | 4/4 | Complete ✓ | 2026-05-14 |
 | 3. UX Polish | 0/TBD | Not started | - |
 | 4. AI Drafting Pipeline | 0/TBD | Not started | - |
