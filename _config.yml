@@ -2,7 +2,7 @@
 title: "Kanha's Study Journal"
 description: "Notes on what I'm learning — algorithms, systems, ML, and building things."
 url: "https://songeamkanha.github.io"
-baseurl: "" # Leave this empty unless your site is in a subdirectory
+baseurl: "/kanha_studyjournal.github.io"
 
 # Build settings
 theme: jekyll-theme-minimal # Replace with your theme's name
