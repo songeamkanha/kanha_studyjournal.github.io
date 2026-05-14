@@ -1,0 +1,19 @@
+- title: "Neural Text Classifier"
+  description: "Fine-tuned BERT model for multi-label document classification on domain-specific corpora. Achieves 91% F1 on the benchmark dataset."
+  tech:
+    - Python
+    - PyTorch
+    - HuggingFace Transformers
+  repo: "https://github.com/songeamkanha/neural-text-classifier"
+  demo: ""
+  featured: true
+
+- title: "ML Experiment Tracker"
+  description: "Lightweight CLI tool for tracking hyperparameters, metrics, and artifacts across ML training runs without requiring a server."
+  tech:
+    - Python
+    - SQLite
+    - Click
+  repo: "https://github.com/songeamkanha/ml-tracker"
+  demo: ""
+  featured: false
