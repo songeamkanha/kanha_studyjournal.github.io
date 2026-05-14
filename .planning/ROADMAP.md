@@ -29,7 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. `_config.yml` contains no unfilled placeholders (`your_twitter_handle`, `Your Name` replaced) and `jekyll-feed`, `jekyll-seo-tag`, `jekyll-sitemap` plugins are active
   3. `index.md` is removed and the Jekyll build produces no conflicts with `index.html`
   4. `DataManager.init()` double-init bug is diagnosed and patched before any content migration begins
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [x] 01-01-PLAN.md — Fix _config.yml, remove index.md, enable plugins
+- [x] 01-02-PLAN.md — Create _layouts/post.html and test post
+- [x] 01-03-PLAN.md — Patch DataManager double-init bug
 
 ### Phase 2: Content Migration
 **Goal**: All blog posts and portfolio items live in committed files that any visitor can read
@@ -41,7 +46,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. All existing posts are committed as `_posts/*.md` files with a consistent frontmatter schema (`title`, `date`, `tags`, `excerpt` required)
   3. Portfolio items are stored in `_data/portfolio.yml` and render on the portfolio page for any visitor
   4. The localStorage-backed admin panel is retired and no longer used for content creation
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Create seed post and _data/portfolio.yml
+- [ ] 02-02-PLAN.md — Rewrite blog/index.html and portfolio/index.html as Jekyll Liquid templates
+- [ ] 02-03-PLAN.md — Rewrite index.html homepage with Jekyll Liquid post and portfolio loops
+- [ ] 02-04-PLAN.md — Delete admin panel, content-loader.js, data-manager.js, and old post viewer files
 
 ### Phase 3: UX Polish
 **Goal**: The site is warm, personal, and readable — typography, tags, homepage, and post features all work
@@ -77,6 +88,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Jekyll Foundation | 3/3 | Complete ✓ | 2026-05-09 |
-| 2. Content Migration | 0/TBD | Not started | - |
+| 2. Content Migration | 0/4 | Not started | - |
 | 3. UX Polish | 0/TBD | Not started | - |
 | 4. AI Drafting Pipeline | 0/TBD | Not started | - |
